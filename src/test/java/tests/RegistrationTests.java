@@ -11,7 +11,12 @@ public class RegistrationTests extends TestBase {
         String email = "wick"+i+"@mail.com";
 
         app.user().openRegistrationForm();
-        app.user().fillRegistrationForm("John","Wick",email,"Wick12345$","Wick12345$","+8765432100");
+        app.user().fillRegistrationForm("John",
+                "Wick",
+                email,
+                "Wick12345$",
+                "Wick12345$",
+                "+8765432100");
         app.user().checkPolicy();
         app.user().submitRegistration();
 
